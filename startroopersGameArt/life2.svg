@@ -1,0 +1,28 @@
+<svg id="life1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.25 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <title>life2</title>
+  <rect class="cls-1" width="12" height="12"/>
+  <rect id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-1" x="12" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_8" data-name="Rectangle 3 copy 8" class="cls-1" x="12" y="6" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_5" data-name="Rectangle 3 copy 5" class="cls-1" x="12" y="24" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_3" data-name="Rectangle 3 copy 3" class="cls-1" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_6" data-name="Rectangle 3 copy 6" class="cls-1" x="6" y="18" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-1" x="24" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_4" data-name="Rectangle 3 copy 4" class="cls-1" x="24" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_7" data-name="Rectangle 3 copy 7" class="cls-1" x="18" y="18" width="12" height="12"/>
+  <rect class="cls-1" x="49.25" width="12" height="12"/>
+  <rect id="Rectangle_3_copy-2" data-name="Rectangle 3 copy" class="cls-1" x="61.25" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_8-2" data-name="Rectangle 3 copy 8" class="cls-1" x="61.25" y="6" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_5-2" data-name="Rectangle 3 copy 5" class="cls-1" x="61.25" y="24" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_3-2" data-name="Rectangle 3 copy 3" class="cls-1" x="49.25" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_6-2" data-name="Rectangle 3 copy 6" class="cls-1" x="55.25" y="18" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_2-2" data-name="Rectangle 3 copy 2" class="cls-1" x="73.25" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_4-2" data-name="Rectangle 3 copy 4" class="cls-1" x="73.25" y="12" width="12" height="12"/>
+  <rect id="Rectangle_3_copy_7-2" data-name="Rectangle 3 copy 7" class="cls-1" x="67.25" y="18" width="12" height="12"/>
+</svg>
