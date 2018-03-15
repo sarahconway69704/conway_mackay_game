@@ -6,13 +6,178 @@
 	display: none;
 }
 
-#container
+.show-piece
 {
-	width: 1030px;
-	margin: 0 auto;
+	display: none !important; opacity: 0 !important;
 }
 
-img
+.start-screen
+{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: red;
+	text-align: center;
+	margin-left: 275px;
+	margin-top: 225px;
+}
+
+.win-screen
+{
+	display: none;
+	position: absolute;
+	opacity: 0;
+	width: 400px;
+	height: 400px;
+	background-color: red;
+	text-align: center;
+	margin-left: 275px;
+	margin-top: 225px; 
+}
+
+.lose-screen
+{
+	display: none;
+	position: absolute;
+	opacity: 0;
+	width: 400px;
+	height: 400px;
+	background-color: red;
+	text-align: center;
+	margin-left: 275px;
+	margin-top: 225px; 
+}
+
+#loser
+{
+	margin-top: 150px;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	
+}
+
+#tryAgain
+{
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+
+#congrats
+{
+	margin-top: 150px;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	
+}
+
+#restart
+{
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#ready
+{
+	margin-top: 150px;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 20px;
+	
+}
+
+#push
+{
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+	font-family: Avenir, Helvetica, Arial, san-serif;
+	font-size: 16px;
+	line-height: 20px;
+
+}	
+
+
+#container
+{
+	
+	width: 1200px;
+	height: 900px;
+	margin: 0 auto;
+	background-color: black;
+	
+}
+
+
+#background h2
+{
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+	position: absolute;
+	margin-left: 200px;
+	margin-top: 30px;
+	font-size: 25px;
+
+}
+
+#background
 {
 	float: left;
 }
+
+#background img
+{
+	height: 850px;
+	width: 950px;
+	
+}
+
+#instructions h2
+{
+	color: greenyellow;
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	
+}
+
+#instructions
+{
+	position: relative;
+	width: 200px;
+	height: 400px;
+	float: left;
+	margin-left: 25px;
+	margin-top: 75px;
+}
+
+
+#instructions ul
+{
+	color: greenyellow;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 10px;
+	list-style: decimal;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#instructions ul li
+{
+	
+}
+
