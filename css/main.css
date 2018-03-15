@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.hidden
+{
+	display: none;
+}
+
+#container
+{
+	width: 1030px;
+	margin: 0 auto;
+}
+
+img
+{
+	float: left;
+}
