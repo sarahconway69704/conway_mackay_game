@@ -8,41 +8,17 @@
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
-<body>
-	<main id="container">
-	<h1 class="hidden">The Game</h1>
-	<section id="background">
-		<h2>Starship Troopers Game</h2>
-		<img src="assets/background.png" alt="sitmap" width="1024" height="864">
-	</section>
-	<section id="instructions">
-		<h2>Instructions</h2>
-		
-		<ul id="steps">
-			<li>Left and right arrow keys for moving your tank</li>
-			<li>Spacebar for shooting</li>
-			<li>Shoot the bugs, find the mother-bug.</li>
-			<li>The only good bug, is a dead bug</li>
-		</ul>
-	</section>
-	
-	<section id="start" class="start-screen">
-		<h2 id="ready">Ready to begin?</h2>
-		<button id="push">START</button>
-	</section>
-	
-	<section id="win" class="win-screen">
-		<h2 id="congrats">Congradulations, soldier!</h2>
-		<button id="restart">PLAY AGAIN?</button>
-	</section>
-	
-	<section id="lost" class="lose-screen">
-		<h2 id="loser">Mission Failed!</h2>
-		<button id="tryAgain">PLAY AGAIN?</button>
-	</section>
-	
-	</main>
+<div class="container">
 
-	<script src="js/main.js"></script>
+</div>
+
+  <canvas width="600" height="600"></canvas>
+
+	<img class="hidden tank" src="images/tank.svg" alt="player">
+	  <button class="pause">Pause game</button><button class="play">Resume Game</button>
+
+
+
+  	<script src="js/main.js"></script>
 </body>
 </html>

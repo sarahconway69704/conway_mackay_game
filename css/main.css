@@ -6,9 +6,49 @@
 	display: none;
 }
 
-.show-piece
+.behind-canvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 400px;
+  background-color: blue;
+}
+
+div,p,body,header,footer,section,article,nav
 {
-	display: none !important; opacity: 0 !important;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir, Helvetica, Arial, san-serif;
+	font-size: 16px;
+	line-height: 20px;
+
+}
+
+canvas {
+	position: relative;
+	border : thin solid black;
+	display: block;
+	margin: 0 auto 20px;
+	background: url(../images/background.png);
+
+}
+
+button
+{
+	margin: 0 8px;
+	user-select: none;
+	cursor: pointer;
+}
+
+.container {
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .start-screen
@@ -20,6 +60,7 @@
 	text-align: center;
 	margin-left: 275px;
 	margin-top: 225px;
+	display: none;
 }
 
 .win-screen
@@ -32,7 +73,7 @@
 	background-color: red;
 	text-align: center;
 	margin-left: 275px;
-	margin-top: 225px; 
+	margin-top: 225px;
 }
 
 .lose-screen
@@ -45,7 +86,7 @@
 	background-color: red;
 	text-align: center;
 	margin-left: 275px;
-	margin-top: 225px; 
+	margin-top: 225px;
 }
 
 #loser
@@ -55,7 +96,7 @@
 	color: white;
 	font-size: 20px;
 	line-height: 30px;
-	
+
 }
 
 #tryAgain
@@ -74,7 +115,7 @@
 	color: white;
 	font-size: 20px;
 	line-height: 30px;
-	
+
 }
 
 #restart
@@ -91,7 +132,7 @@
 	font-family: 'Press Start 2P', cursive;
 	color: white;
 	font-size: 20px;
-	
+
 }
 
 #push
@@ -100,27 +141,6 @@
 	margin-top: 10px;
 	border-radius: 5px;
 	font-family: 'Press Start 2P', cursive;
-}
-
-div,p,body,header,footer,section,article,nav 
-{ 
-	margin: 0; 
-	padding: 0; 
-	font-family: Avenir, Helvetica, Arial, san-serif;
-	font-size: 16px;
-	line-height: 20px;
-
-}	
-
-
-#container
-{
-	
-	width: 1200px;
-	height: 900px;
-	margin: 0 auto;
-	background-color: black;
-	
 }
 
 
@@ -140,22 +160,16 @@ div,p,body,header,footer,section,article,nav
 	float: left;
 }
 
-#background img
-{
-	height: 850px;
-	width: 950px;
-	
-}
 
-#instructions h2
+.instructions h2
 {
 	color: greenyellow;
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
-	
+
 }
 
-#instructions
+.instructions
 {
 	position: relative;
 	width: 200px;
@@ -166,7 +180,7 @@ div,p,body,header,footer,section,article,nav
 }
 
 
-#instructions ul
+.instructions ul
 {
 	color: greenyellow;
 	font-family: 'Press Start 2P', cursive;
@@ -175,9 +189,3 @@ div,p,body,header,footer,section,article,nav
 	margin-left: 5px;
 	margin-top: 5px;
 }
-
-#instructions ul li
-{
-	
-}
-
