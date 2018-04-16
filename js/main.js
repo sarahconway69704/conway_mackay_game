@@ -8,10 +8,12 @@
     playerImg = document.querySelector('.tank'),
     mouseTracker = { x : theCanvas.width /2 },
     playerLives = [1, 2, 3],
+
     // grab the enemy images
     enemy1 = document.querySelector('.enemyOne'),
     enemy2 = document.querySelector('.enemyTwo'),
     enemy3 = document.querySelector('.enemyThree'),
+    mother = document.querySelector('.motherBug'),
 
     player = { x: 275, y: 550, width: 50, height: 50, speed: 8, lives: 3}, //variables that describe the player
 
@@ -22,6 +24,10 @@
     resetButton = document.querySelector('.reset'),
 
 
+    RestartScreen = document.querySelector('.win'),
+    restartButton = document.querySelector('.startAgain'),
+
+
 //grab reset screen
     resetScreen = document.querySelector('.level-up');
 
@@ -30,10 +36,12 @@
       score = 0,
       mousePos = 0;
       bullets = [],
+      bulletCount = 0,
+      bossLevel = false,
       squares = [
-      { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy1, xspeed: -3, yspeed: 5, points: 10},
-      { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy2, xspeed: 7, yspeed: 7, points: 5},
-      { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy3, xspeed: -5, yspeed: 3, points: 10},
+      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy1, xspeed: -3, yspeed: 5, points: 10},
+      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy2, xspeed: 7, yspeed: 7, points: 5},
+      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy3, xspeed: -5, yspeed: 3, points: 10},
 
     ];
 
@@ -82,6 +90,16 @@ function draw() {
         squares.splice(index, 1);
         bullets.splice(bulletIndex, 1);
 
+        if (bossLevel == true) {
+          console.log(bulletCount);
+          bulletCount++;
+          if (bulletCount == 10) {
+              console.log('you win!');
+          showRestartScreen();
+        }
+      }
+        //if hit 10 times, she dies and win game!
+
         //increment the score based on enemy points
         score += square.points;
         console.log(`Score = ${score}`);
@@ -93,17 +111,7 @@ function draw() {
           showResetScreen()
         }
 
-        //play explosion sound
-        let explode = document.createElement('audio');
-        explode.src = "audio/explosion.mp3";
 
-        document.body.appendChild(explode);
-
-        explode.addEventListener('ended', () => {
-          document.body.removeChild(explode);
-      });
-
-      explode.play();
     }
     });
 
@@ -203,18 +211,22 @@ function showResetScreen() {
   playState = false;
 }
 
+function showRestartScreen() {
+  RestartScreen.classList.add('show-level-up');
+  playState = false;
+}
+
 function levelUpGame() {
   //increase the difficulty
   bullets = [],
+  ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
   squares = [
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy1, xspeed: -3, yspeed: 5, points: 10},
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy2, xspeed: 7, yspeed: 7, points: 5},
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy3, xspeed: -5, yspeed: 3, points: 10},
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy1, xspeed: 3, yspeed: 5, points: 10},
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy2, xspeed: -7, yspeed: 7, points: 5},
-  { x: randomX(), y: 30, x2: 30, y2: 30, image : enemy3, xspeed: 5, yspeed: 3, points: 10},
-  //restart the game
+  { x: randomX(), y: 30, x2: 200, y2: 200, image : mother, xspeed: -3, yspeed: 5, points: 10},
 ];
+ bossLevel = true;
+
+//restart the game
+
 player.x = theCanvas.width / 2;
 mousePos = theCanvas.width / 2;
 

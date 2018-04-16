@@ -4,7 +4,7 @@ body {
 	font-size: 16px;
 	color: white;
 
-}
+} 
 
 canvas {
 	position: relative;
@@ -46,8 +46,23 @@ button {  margin: 0 8px; user-select: none; cursor: pointer; }
 	display: none; opacity: 0;
 }
 
+.win
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 9px;
+	width: 600px;
+	height: 600px;
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	z-index: 2;
+	display: none; opacity: 0;
+}
+
 .level-up-message { font-size: 2em; margin-top: 100px; }
-.level-up p { font-size: 1.5em; }
+.level-up p { font-size: 1.5em;}
 
 .show-level-up { display : block; opacity : 1; }
 
