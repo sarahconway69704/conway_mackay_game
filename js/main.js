@@ -14,6 +14,7 @@
     pauseButton = document.querySelector('.pause'),
     resetButton = document.querySelector('.reset');
 
+bullets = [];
 
 
 function draw() {
