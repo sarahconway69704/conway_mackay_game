@@ -93,10 +93,7 @@ function draw() {
         if (bossLevel == true) {
           console.log(bulletCount);
           bulletCount++;
-          if (bulletCount == 10) {
-              console.log('you win!');
-          showRestartScreen();
-        }
+
       }
         //if hit 10 times, she dies and win game!
 
@@ -105,14 +102,17 @@ function draw() {
         console.log(`Score = ${score}`);
 
 //are there any enemies left?
-        if (squares.length == 0) {
-          //show the level up screen
-          console.log('level up!');
-          showResetScreen()
+
+        if (bossLevel == false) {
+          if (squares.length == 0) {
+            //show the level up screen
+            console.log('level up!');
+            showResetScreen()
+          }
+        } else if (bulletCount == 10) {
+            console.log('you win!');
+            showRestartScreen();
         }
-
-
-    }
     });
 
 
