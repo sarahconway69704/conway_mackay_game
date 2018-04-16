@@ -1,10 +1,22 @@
-@charset "UTF-8";
-/* CSS Document */
+body {
+	text-align: center;
+	user-select: none;
+	font-size: 16px;
+	color: white;
 
-.hidden
-{
-	display: none;
 }
+
+canvas {
+	position: relative;
+	border : thin solid black;
+	display: block;
+	margin: 0 auto 20px;
+  background: url(../images/background.png);
+}
+/* cursor: none; */
+button {  margin: 0 8px; user-select: none; cursor: pointer; }
+
+.hide-me { display : none; }
 
 .behind-canvas {
   position: absolute;
@@ -16,31 +28,30 @@
   background-color: blue;
 }
 
-div,p,body,header,footer,section,article,nav
-{
-	margin: 0;
-	padding: 0;
-	font-family: Avenir, Helvetica, Arial, san-serif;
-	font-size: 16px;
-	line-height: 20px;
+/*#gameBoard { position: relative; width: 600px; margin: 0 auto; }
+*/
+#newShip { position: absolute; bottom: 0; left: 0 }
 
+.level-up {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 9px;
+	width: 600px;
+	height: 600px;
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	z-index: 2;
+	display: none; opacity: 0;
 }
 
-canvas {
-	position: relative;
-	border : thin solid black;
-	display: block;
-	margin: 0 auto 20px;
-	background: url(../images/background.png);
+.level-up-message { font-size: 2em; margin-top: 100px; }
+.level-up p { font-size: 1.5em; }
 
-}
+.show-level-up { display : block; opacity : 1; }
 
-button
-{
-	margin: 0 8px;
-	user-select: none;
-	cursor: pointer;
-}
+/* background animation */
 
 .container {
   height: 600px;
@@ -49,143 +60,4 @@ button
   position: absolute;
   left: 0;
   right: 0;
-}
-
-.start-screen
-{
-	position: absolute;
-	width: 400px;
-	height: 400px;
-	background-color: red;
-	text-align: center;
-	margin-left: 275px;
-	margin-top: 225px;
-	display: none;
-}
-
-.win-screen
-{
-	display: none;
-	position: absolute;
-	opacity: 0;
-	width: 400px;
-	height: 400px;
-	background-color: red;
-	text-align: center;
-	margin-left: 275px;
-	margin-top: 225px;
-}
-
-.lose-screen
-{
-	display: none;
-	position: absolute;
-	opacity: 0;
-	width: 400px;
-	height: 400px;
-	background-color: red;
-	text-align: center;
-	margin-left: 275px;
-	margin-top: 225px;
-}
-
-#loser
-{
-	margin-top: 150px;
-	font-family: 'Press Start 2P', cursive;
-	color: white;
-	font-size: 20px;
-	line-height: 30px;
-
-}
-
-#tryAgain
-{
-	padding: 10px 20px 10px 20px;
-	margin-top: 10px;
-	border-radius: 5px;
-	font-family: 'Press Start 2P', cursive;
-}
-
-
-#congrats
-{
-	margin-top: 150px;
-	font-family: 'Press Start 2P', cursive;
-	color: white;
-	font-size: 20px;
-	line-height: 30px;
-
-}
-
-#restart
-{
-	padding: 10px 20px 10px 20px;
-	margin-top: 10px;
-	border-radius: 5px;
-	font-family: 'Press Start 2P', cursive;
-}
-
-#ready
-{
-	margin-top: 150px;
-	font-family: 'Press Start 2P', cursive;
-	color: white;
-	font-size: 20px;
-
-}
-
-#push
-{
-	padding: 10px 20px 10px 20px;
-	margin-top: 10px;
-	border-radius: 5px;
-	font-family: 'Press Start 2P', cursive;
-}
-
-
-#background h2
-{
-	color: white;
-	font-family: 'Press Start 2P', cursive;
-	position: absolute;
-	margin-left: 200px;
-	margin-top: 30px;
-	font-size: 25px;
-
-}
-
-#background
-{
-	float: left;
-}
-
-
-.instructions h2
-{
-	color: greenyellow;
-	font-family: 'Press Start 2P', cursive;
-	text-align: center;
-
-}
-
-.instructions
-{
-	position: relative;
-	width: 200px;
-	height: 400px;
-	float: left;
-	margin-left: 25px;
-	margin-top: 75px;
-}
-
-
-.instructions ul
-{
-	color: greenyellow;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 10px;
-	list-style: decimal;
-	margin-left: 5px;
-	margin-top: 5px;
 }
