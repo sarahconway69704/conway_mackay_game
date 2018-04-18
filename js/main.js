@@ -39,12 +39,12 @@
       bulletCount = 0,
       bossLevel = false,
       squares = [
-      { x: 200, y: 0, x2: 50, y2: 50, image : enemy1, xspeed: 0, yspeed: 3, points: 10},
-      { x: 100, y: 0, x2: 50, y2: 50, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
-      { x: 500, y: 0, x2: 50, y2: 50, image : enemy3, xspeed: 0, yspeed: 10, points: 10},
-      { x: 600, y: 0, x2: 50, y2: 50, image : enemy1, xspeed: 0, yspeed: 5, points: 10},
-      { x: 300, y: 0, x2: 50, y2: 50, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
-      { x: 400, y: 0, x2: 50, y2: 50, image : enemy3, xspeed: 0, yspeed: 5, points: 10},
+      { x: 200, y: 0, x2: 70, y2: 70, image : enemy1, xspeed: 0, yspeed: 3, points: 10},
+      { x: 100, y: 0, x2: 70, y2: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 500, y: 0, x2: 70, y2: 70, image : enemy3, xspeed: 0, yspeed: 10, points: 10},
+      { x: 600, y: 0, x2: 70, y2: 70, image : enemy1, xspeed: 0, yspeed: 5, points: 10},
+      { x: 300, y: 0, x2: 70, y2: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 400, y: 0, x2: 70, y2: 70, image : enemy3, xspeed: 0, yspeed: 5, points: 10},
 
     ];
 
@@ -92,11 +92,12 @@ function draw() {
       // check for collision (bullet and box) => check all coord and dimensions to see if a bullet is touching a box
       if (bullet.y <= (square.y + square.y2) && bullet.y > square.y && bullet.x > square.x && bullet.x < (square.x + square.x2)){
 
+
          if (bossLevel == false) {
          squares.splice(index, 1);
-         squares.length
-         console.log('dead');
+         console.log(squares.length);
          }
+
         bullets.splice(bulletIndex, 1);
 
 
@@ -114,16 +115,16 @@ function draw() {
 //are there any enemies left?
 
         if (bossLevel == false) {
-          if (squares.length == 0) {
+          if (squares.length == 1) {
             //show the level up screen
             console.log('level up!');
             showResetScreen()
           }
         } else if (bulletCount == 10) {
-          if (motherBug.length == 0) {
+
             console.log('you win!');
             showRestartScreen();
-            }
+
         }
       }
     });
@@ -139,6 +140,15 @@ function draw() {
   squares.forEach (square => {
       //ctx.fillStyle = square.color;
       ctx.drawImage(square.image, square.x, square.y, square.x2, square.y2);
+
+      if ((player.x + player.width) && (square.y + square.y2) == player.y) {
+        console.log('hit player!');
+         playerLives.pop()
+         }
+
+         if (playerLives.length == 0) {
+               showRestartScreen()
+          }
 
     if (square.x + square.x2 > theCanvas.width){
       square.xspeed *= -1;
@@ -163,6 +173,8 @@ function draw() {
 
   window.requestAnimationFrame(draw);
 }
+
+
 
 
 // function moveShip(e) {
@@ -259,6 +271,13 @@ function randomX() {
 
 window.requestAnimationFrame(draw); //everytime we do a key press , we want another one
 
+function restartGame(){
+  location.reload();
+}
+
+
+
+
 //window.addEventListener('keydown', moveShip);
 theCanvas.addEventListener('mousemove', movePlayer);
 theCanvas.addEventListener('click', createBullet);
@@ -266,4 +285,5 @@ theCanvas.addEventListener('click', createBullet);
 playButton.addEventListener('click', resumeGame);
 pauseButton.addEventListener('click', pauseGame);
 resetButton.addEventListener('click', levelUpGame);
+restartButton.addEventListener('click', restartGame);
 })();
