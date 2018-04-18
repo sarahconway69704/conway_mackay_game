@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432 485.6" style="enable-background:new 0 0 432 485.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#B7B3B3;}
 	.st1{fill:#6B1A0F;}
@@ -12,44 +12,45 @@
 	.st6{fill:#F8E8E0;}
 </style>
 <g id="mouth">
-	<path class="st0" d="M273.1,443.1c0,0-34.5,44.5-9,67s25.5,22.5,25.5,22.5s-27-39-21-49.5s22.5-33,22.5-33L273.1,443.1z"/>
-	<path class="st1" d="M273.1,447.1c0,0,9,37.5,49.5,36c40.5-1.5,73.5,3,82.5-15c9-18,9-18,9-18L273.1,447.1z"/>
-	<path class="st0" d="M415.7,442.1c0,0,34.5,44.5,9,67c-25.5,22.5-25.5,22.5-25.5,22.5s27-39,21-49.5s-22.5-33-22.5-33L415.7,442.1z
-		"/>
-	<path class="st0" d="M316.1,434.1c0,0-34.5,44.5-9,67c25.5,22.5,25.5,22.5,25.5,22.5s-27-39-21-49.5s22.5-33,22.5-33L316.1,434.1z"
+	<path class="st0" d="M149.1,396.1c0,0-34.5,44.5-9,67c25.5,22.5,25.5,22.5,25.5,22.5s-27-39-21-49.5s22.5-33,22.5-33L149.1,396.1z"
 		/>
-	<path class="st0" d="M369.7,434.1c0,0,34.5,44.5,9,67c-25.5,22.5-25.5,22.5-25.5,22.5s27-39,21-49.5s-22.5-33-22.5-33L369.7,434.1z
+	<path class="st1" d="M149.1,400.1c0,0,9,37.5,49.5,36s73.5,3,82.5-15s9-18,9-18L149.1,400.1z"/>
+	<path class="st0" d="M291.7,395.1c0,0,34.5,44.5,9,67c-25.5,22.5-25.5,22.5-25.5,22.5s27-39,21-49.5s-22.5-33-22.5-33L291.7,395.1z
+		"/>
+	<path class="st0" d="M192.1,387.1c0,0-34.5,44.5-9,67c25.5,22.5,25.5,22.5,25.5,22.5s-27-39-21-49.5s22.5-33,22.5-33L192.1,387.1z"
+		/>
+	<path class="st0" d="M245.7,387.1c0,0,34.5,44.5,9,67c-25.5,22.5-25.5,22.5-25.5,22.5s27-39,21-49.5s-22.5-33-22.5-33L245.7,387.1z
 		"/>
 </g>
 <g id="legs">
-	<ellipse class="st2" cx="225.1" cy="394.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="464.1" cy="395.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="178.1" cy="309.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="498.1" cy="315.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="177.1" cy="135.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="498.1" cy="129.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="428.1" cy="79.1" rx="24" ry="21"/>
-	<ellipse class="st2" cx="238.1" cy="79.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="101.1" cy="347.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="340.1" cy="348.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="54.1" cy="262.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="374.1" cy="268.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="53.1" cy="88.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="374.1" cy="82.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="304.1" cy="32.1" rx="24" ry="21"/>
+	<ellipse class="st2" cx="114.1" cy="32.1" rx="24" ry="21"/>
 </g>
 <g id="body">
-	<rect x="184.1" y="84.8" class="st3" width="309.6" height="293.2"/>
-	<rect x="233.3" y="352" class="st3" width="219.2" height="97.3"/>
-	<rect x="130.6" y="142.4" class="st3" width="86.3" height="156.2"/>
-	<rect x="480" y="139.9" class="st3" width="69.9" height="163"/>
-	<rect x="249.4" y="52" class="st3" width="178.1" height="47.9"/>
+	<rect x="60.1" y="37.8" class="st3" width="309.6" height="293.2"/>
+	<rect x="109.3" y="305" class="st3" width="219.2" height="97.3"/>
+	<rect x="6.6" y="95.4" class="st3" width="86.3" height="156.2"/>
+	<rect x="356" y="92.9" class="st3" width="69.9" height="163"/>
+	<rect x="125.4" y="5" class="st3" width="178.1" height="47.9"/>
 </g>
 <g id="face_x26_accents">
-	<path class="st4" d="M438.1,411.1c0,19.9-43.2,14.9-96.6,14.9s-96.9,5-96.9-14.9s40-55.1,93.4-55.1S438.1,391.2,438.1,411.1z"/>
-	<rect x="312.3" y="401.2" class="st5" width="19.2" height="19.2"/>
-	<rect x="349.1" y="401" class="st5" width="19.2" height="19.2"/>
-	<rect x="288.6" y="411.4" class="st5" width="11.4" height="9.9"/>
-	<rect x="270.3" y="405.4" class="st5" width="11.4" height="9.9"/>
-	<rect x="251.6" y="398.4" class="st5" width="11.4" height="9.9"/>
-	<rect x="377" y="412.6" class="st5" width="11.4" height="9.9"/>
-	<rect x="396.1" y="408.2" class="st5" width="11.4" height="9.9"/>
-	<rect x="415.4" y="400.7" class="st5" width="11.4" height="9.9"/>
-	<path class="st6" d="M251,193c0,0,80-64,164-6C415,187,339,155,251,193z"/>
-	<path class="st6" d="M257,263c0,0,80-64,164-6C421,257,345,225,257,263z"/>
-	<path class="st6" d="M257,333c0,0,80-64,164-6C421,327,345,295,257,333z"/>
+	<path class="st4" d="M314.1,364.1c0,19.9-43.2,14.9-96.6,14.9s-96.9,5-96.9-14.9s40-55.1,93.4-55.1S314.1,344.2,314.1,364.1z"/>
+	<rect x="188.3" y="354.2" class="st5" width="19.2" height="19.2"/>
+	<rect x="225.1" y="354" class="st5" width="19.2" height="19.2"/>
+	<rect x="164.6" y="364.4" class="st5" width="11.4" height="9.9"/>
+	<rect x="146.3" y="358.4" class="st5" width="11.4" height="9.9"/>
+	<rect x="127.6" y="351.4" class="st5" width="11.4" height="9.9"/>
+	<rect x="253" y="365.6" class="st5" width="11.4" height="9.9"/>
+	<rect x="272.1" y="361.2" class="st5" width="11.4" height="9.9"/>
+	<rect x="291.4" y="353.7" class="st5" width="11.4" height="9.9"/>
+	<path class="st6" d="M127,146c0,0,80-64,164-6C291,140,215,108,127,146z"/>
+	<path class="st6" d="M133,216c0,0,80-64,164-6C297,210,221,178,133,216z"/>
+	<path class="st6" d="M133,286c0,0,80-64,164-6C297,280,221,248,133,286z"/>
 </g>
 </svg>
