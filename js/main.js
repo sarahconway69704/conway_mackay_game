@@ -39,9 +39,12 @@
       bulletCount = 0,
       bossLevel = false,
       squares = [
-      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy1, xspeed: -3, yspeed: 5, points: 10},
-      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy2, xspeed: 7, yspeed: 7, points: 5},
-      { x: randomX(), y: 30, x2: 50, y2: 50, image : enemy3, xspeed: -5, yspeed: 3, points: 10},
+      { x: 200, y: 0, x2: 50, y2: 50, image : enemy1, xspeed: 0, yspeed: 3, points: 10},
+      { x: 100, y: 0, x2: 50, y2: 50, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 500, y: 0, x2: 50, y2: 50, image : enemy3, xspeed: 0, yspeed: 10, points: 10},
+      { x: 600, y: 0, x2: 50, y2: 50, image : enemy1, xspeed: 0, yspeed: 5, points: 10},
+      { x: 300, y: 0, x2: 50, y2: 50, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 400, y: 0, x2: 50, y2: 50, image : enemy3, xspeed: 0, yspeed: 5, points: 10},
 
     ];
 
@@ -83,12 +86,19 @@ function draw() {
 
     let bulletIndex = index;
 
+
   squares.forEach ((square, index) => {
 
       // check for collision (bullet and box) => check all coord and dimensions to see if a bullet is touching a box
       if (bullet.y <= (square.y + square.y2) && bullet.y > square.y && bullet.x > square.x && bullet.x < (square.x + square.x2)){
-        squares.splice(index, 1);
+
+         if (bossLevel == false) {
+         squares.splice(index, 1);
+         squares.length
+         console.log('dead');
+         }
         bullets.splice(bulletIndex, 1);
+
 
         if (bossLevel == true) {
           console.log(bulletCount);
@@ -110,9 +120,12 @@ function draw() {
             showResetScreen()
           }
         } else if (bulletCount == 10) {
+          if (motherBug.length == 0) {
             console.log('you win!');
             showRestartScreen();
+            }
         }
+      }
     });
 
 
@@ -121,7 +134,7 @@ function draw() {
     if (bullet.y < 0) {
       bullets.splice(index, 1);
     }
-  })
+  });
 
   squares.forEach (square => {
       //ctx.fillStyle = square.color;
@@ -133,7 +146,7 @@ function draw() {
       square.xspeed *= -1;
     }
 
-    if (square.y + square.y2 > theCanvas.height - 100){
+    if (square.y + square.y2 > theCanvas.height){
       square.yspeed *= -1;
     } else if (square.y < 0) {
       square.yspeed *= -1;
@@ -150,6 +163,7 @@ function draw() {
 
   window.requestAnimationFrame(draw);
 }
+
 
 // function moveShip(e) {
 //   //check the keycode of the key you're pressing
@@ -183,8 +197,9 @@ function createBullet() {
     y : theCanvas.height - player.height - 10,
     x2 : 5,
     y2 : 10,
-    speed : 8
+    speed : 2,
   };
+
 
   bullets.push(newBullet);
 
