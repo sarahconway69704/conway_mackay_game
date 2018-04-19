@@ -2,7 +2,7 @@ body {
 	text-align: center;
 	user-select: none;
 	font-size: 16px;
-	color: white;
+	background-color: black;
 
 }
 
@@ -11,7 +11,7 @@ canvas {
 	border : thin solid black;
 	display: block;
 	margin: 0 auto 20px;
-  background: url(../images/background.png);
+    background: url(../images/background.png);
 }
 /* cursor: none; */
 button
@@ -24,6 +24,18 @@ button
 	border-radius: 5px;
 
  }
+
+#mainTitle
+{
+	color: greenyellow;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#level-up-message
+{
+	font-family: 'Press Start 2P', cursive;
+	background-color: greenyellow;
+}
 
 .hide-me { display : none; }
 
@@ -84,4 +96,16 @@ button
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.pause
+{
+	font-family: 'Press Start 2P', cursive;
+	color: black;
+}
+
+.play
+{
+	font-family: 'Press Start 2P', cursive;
+	color: black;
 }
