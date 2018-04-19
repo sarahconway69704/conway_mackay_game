@@ -11,7 +11,7 @@ canvas {
 	border : thin solid black;
 	display: block;
 	margin: 0 auto 20px;
-    background: url(../images/background.png);
+  background: url(../images/background.png);
 }
 /* cursor: none; */
 button
@@ -22,7 +22,18 @@ button
 	background-color: pink;
 	padding: 10px;
 	border-radius: 5px;
+	border: none;
+ }
 
+ button:hover
+ {
+	 background-color: red;
+	 padding: 15px;
+ }
+
+ button:active
+ {
+	 background-color: white;
  }
 
 #mainTitle
@@ -31,11 +42,7 @@ button
 	font-family: 'Press Start 2P', cursive;
 }
 
-#level-up-message
-{
-	font-family: 'Press Start 2P', cursive;
-	background-color: greenyellow;
-}
+
 
 .hide-me { display : none; }
 
@@ -49,9 +56,7 @@ button
   background-color: blue;
 }
 
-/*#gameBoard { position: relative; width: 600px; margin: 0 auto; }
-*/
-#newShip { position: absolute; bottom: 0; left: 0 }
+
 
 .level-up {
 	position: absolute;
@@ -63,6 +68,7 @@ button
 	background-color: black;
 	color: white;
 	margin: 0 auto;
+	margin-top: 56px;
 	z-index: 2;
 	display: none; opacity: 0;
 }
@@ -79,11 +85,32 @@ button
 	color: white;
 	margin: 0 auto;
 	z-index: 2;
+	margin-top: 56px;
 	display: none; opacity: 0;
 }
 
-.level-up-message { font-size: 2em; margin-top: 100px; }
-.level-up p { font-size: 1.5em;}
+.winning-message
+{
+	font-size: 1.5em;
+	font-family: 'Press Start 2P', cursive;
+	color: greenyellow;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.level-up-message
+{
+	font-size: 2em;
+	margin-top: 100px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+.level-up p {
+	font-size: 1.5em;
+	font-family: 'Press Start 2P', cursive;
+	color: greenyellow;
+	line-height: 40px;
+}
 
 .show-level-up { display : block; opacity : 1; }
 
@@ -96,6 +123,18 @@ button
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.reset
+{
+	font-family: 'Press Start 2P', cursive;
+	color: black;
+}
+
+.startAgain
+{
+	font-family: 'Press Start 2P', cursive;
+	color: black;
 }
 
 .pause
