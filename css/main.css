@@ -4,7 +4,7 @@ body {
 	font-size: 16px;
 	color: white;
 
-} 
+}
 
 canvas {
 	position: relative;
@@ -14,7 +14,16 @@ canvas {
   background: url(../images/background.png);
 }
 /* cursor: none; */
-button {  margin: 0 8px; user-select: none; cursor: pointer; }
+button
+{
+	margin: 8px;
+	user-select: none;
+	cursor: pointer;
+	background-color: pink;
+	padding: 10px;
+	border-radius: 5px;
+
+ }
 
 .hide-me { display : none; }
 
