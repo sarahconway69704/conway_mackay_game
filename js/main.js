@@ -126,6 +126,17 @@ function draw() {
             showRestartScreen();
 
         }
+        //play explosion sound
+        let explode = document.createElement('audio');
+        explode.src = "audio/popping.mp3";
+
+        document.body.appendChild(explode);
+
+        explode.addEventListener('ended', () => {
+          document.body.removeChild(explode);
+      });
+
+      explode.play();
       }
     });
 
@@ -141,7 +152,7 @@ function draw() {
       //ctx.fillStyle = square.color;
       ctx.drawImage(square.image, square.x, square.y, square.x2, square.y2);
 
-      if ((square.y + square.y2) == player.y + player.y2) {//more than the players x and less than the width
+      if (square.x > player.x && square.x < player.width){//more than the players x and less than the width
         console.log('hit player!');
          playerLives.pop()
 
@@ -216,6 +227,16 @@ function createBullet() {
 
   bullets.push(newBullet);
 
+  //play cheesy laser sound
+  let laser = document.createElement('audio');
+  laser.src ="audio/gun.mp3";
+  document.body.appendChild(laser);
+
+  laser.addEventListener('ended', () => {
+    document.body.removeChild(laser);
+  });
+
+  laser.play();
 
 }
 
