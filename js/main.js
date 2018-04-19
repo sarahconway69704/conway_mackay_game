@@ -141,9 +141,10 @@ function draw() {
       //ctx.fillStyle = square.color;
       ctx.drawImage(square.image, square.x, square.y, square.x2, square.y2);
 
-      if ((player.x + player.width) && (square.y + square.y2) == player.y) {
+      if ((square.y + square.y2) == player.y + player.y2) {//more than the players x and less than the width
         console.log('hit player!');
          playerLives.pop()
+
          }
 
          if (playerLives.length == 0) {
