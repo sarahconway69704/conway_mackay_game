@@ -27,6 +27,9 @@
     RestartScreen = document.querySelector('.win'),
     restartButton = document.querySelector('.startAgain'),
 
+    loseScreen = document.querySelector('.lose'),
+
+
 
 //grab reset screen
     resetScreen = document.querySelector('.level-up');
@@ -39,12 +42,12 @@
       bulletCount = 0,
       bossLevel = false,
       squares = [
-      { x: 200, y: 0, x2: 70, y2: 70, image : enemy1, xspeed: 0, yspeed: 3, points: 10},
-      { x: 100, y: 0, x2: 70, y2: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
-      { x: 500, y: 0, x2: 70, y2: 70, image : enemy3, xspeed: 0, yspeed: 10, points: 10},
-      { x: 600, y: 0, x2: 70, y2: 70, image : enemy1, xspeed: 0, yspeed: 5, points: 10},
-      { x: 300, y: 0, x2: 70, y2: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
-      { x: 400, y: 0, x2: 70, y2: 70, image : enemy3, xspeed: 0, yspeed: 5, points: 10},
+      { x: 200, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy1, xspeed: 0, yspeed: 3, points: 10},
+      { x: 100, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 500, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy3, xspeed: 0, yspeed: 10, points: 10},
+      { x: 600, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy1, xspeed: 0, yspeed: 5, points: 10},
+      { x: 300, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy2, xspeed: 0, yspeed: 7, points: 5},
+      { x: 400, y: 0, x2: 70, y2: 70, height: 70, width: 70, image : enemy3, xspeed: 0, yspeed: 5, points: 10},
 
     ];
 
@@ -152,14 +155,13 @@ function draw() {
       //ctx.fillStyle = square.color;
       ctx.drawImage(square.image, square.x, square.y, square.x2, square.y2);
 
-      if (square.x > player.x && square.x < player.width){//more than the players x and less than the width
+      if (player.x < square.x + square.width && player.x + player.width > square.x && player.y < square.y + square.height && player.height + player.y > square.y){//more than the players x and less than the width
         console.log('hit player!');
          playerLives.pop()
-
          }
 
          if (playerLives.length == 0) {
-               showRestartScreen()
+               showLoseScreen()
           }
 
     if (square.x + square.x2 > theCanvas.width){
@@ -265,6 +267,11 @@ function showRestartScreen() {
   playState = false;
 }
 
+function showLoseScreen(){
+  loseScreen.classList.add('show-level-up');
+  playState = false;
+}
+
 function levelUpGame() {
   //increase the difficulty
   bullets = [],
@@ -288,13 +295,13 @@ window.requestAnimationFrame(draw);
 }
 
 function randomX() {
-  return Math.floor(Math.random() * (theCanvas.width - 100));
+  return Math.floor(Math.random() * (theCanvas.width - 200));
 }
 
 window.requestAnimationFrame(draw); //everytime we do a key press , we want another one
 
 function restartGame(){
-  location.reload();
+  window.location.reload(); //won't reload for loseScreen
 }
 
 
