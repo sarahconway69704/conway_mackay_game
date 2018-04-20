@@ -112,6 +112,32 @@ button
 	line-height: 40px;
 }
 
+.lose
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 9px;
+	width: 600px;
+	height: 600px;
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	z-index: 2;
+	margin-top: 56px;
+	display: none; opacity: 0;
+}
+
+.losing-message
+{
+	font-size: 1.5em;
+	font-family: 'Press Start 2P', cursive;
+	color: greenyellow;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+
 .show-level-up { display : block; opacity : 1; }
 
 /* background animation */
