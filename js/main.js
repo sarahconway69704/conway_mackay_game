@@ -110,7 +110,6 @@ function draw() {
         if (bossLevel == true) {
           console.log(bulletCount);
           bulletCount++;
-
       }
         //if hit 10 times, she dies and win game!
 
@@ -124,7 +123,7 @@ function draw() {
           if (squares.length == 1) {
             //show the level up screen
             console.log('level up!');
-            showResetScreen()
+            showResetScreen();
           }
         } else if (bulletCount == 10) {
 
@@ -160,14 +159,23 @@ function draw() {
 
       if (player.x < square.x + square.width && player.x + player.width > square.x && player.y < square.y + square.height && player.height + player.y > square.y){//more than the players x and less than the width
         console.log('hit player!');
-         playerLives.pop(1);
-        pauseGame()
-        showHitScreen()
-         }
 
-         if (playerLives.length == 0) {
-               showLoseScreen()
-          }
+        //debugger;
+
+        pauseGame();
+
+        playerLives.pop();
+
+        // playerLives.forEach((life, index) => {
+        //   ctx.drawImage(playerImg, 10 + (index * 26), 10, 20, 20);
+        // });
+        
+        showHitScreen();
+      }
+
+     if (playerLives.length == 0) {
+           showLoseScreen()
+      }
 
     if (square.x + square.x2 > theCanvas.width){
       square.xspeed *= -1;
@@ -255,7 +263,7 @@ function movePlayer(e) {
 
 function resumeGame() {
   playState = true;
-  window.requestAnimationFrame(draw);
+  draw();
 }
 
 function pauseGame() {
@@ -282,9 +290,16 @@ function showHitScreen(){
   playState = false;
 }
 
-function continueGame(){
-  playState = true;
-  window.requestAnimationFrame(draw);
+function continueGame() {
+  debugger;
+  squares.forEach(square => square.y = 0);
+  
+  hitScreen.classList.remove('show-level-up');
+
+  setTimeout(() => {
+    playState = true;
+    window.requestAnimationFrame(draw);
+  }, 750);
 }
 
 function levelUpGame() {
@@ -316,16 +331,7 @@ function randomX() {
  //everytime we do a key press , we want another one
 
 function restartGame(){
-  document.location.reload(); //won't reload for loseScreen
-}
-
-function continueGame(){
-hitScreen.classList.remove('show-level-up')
-
-   if (hitScreen.classList.remove('show-level-up')) {
-     playState = true;
-
-   }
+  window.location.reload(); //won't reload for loseScreen
 }
 
 window.requestAnimationFrame(draw);
@@ -340,4 +346,5 @@ resetButton.addEventListener('click', levelUpGame);
 restartButton.addEventListener('click', restartGame);
 lostButton.addEventListener('click', restartGame);
 hitButton.addEventListener('click', continueGame);
+
 })();
