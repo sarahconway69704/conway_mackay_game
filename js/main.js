@@ -28,7 +28,10 @@
     restartButton = document.querySelector('.startAgain'),
 
     loseScreen = document.querySelector('.lose'),
+    lostButton = document.querySelector('.lost'),
 
+    hitScreen = document.querySelector('.hit'),
+    hitButton = document.querySelector('.shot'),
 
 
 //grab reset screen
@@ -157,7 +160,9 @@ function draw() {
 
       if (player.x < square.x + square.width && player.x + player.width > square.x && player.y < square.y + square.height && player.height + player.y > square.y){//more than the players x and less than the width
         console.log('hit player!');
-         playerLives.pop()
+         playerLives.pop(1);
+        pauseGame()
+        showHitScreen()
          }
 
          if (playerLives.length == 0) {
@@ -272,6 +277,16 @@ function showLoseScreen(){
   playState = false;
 }
 
+function showHitScreen(){
+  hitScreen.classList.add('show-level-up');
+  playState = false;
+}
+
+function continueGame(){
+  playState = true;
+  window.requestAnimationFrame(draw);
+}
+
 function levelUpGame() {
   //increase the difficulty
   bullets = [],
@@ -298,16 +313,24 @@ function randomX() {
   return Math.floor(Math.random() * (theCanvas.width - 200));
 }
 
-window.requestAnimationFrame(draw); //everytime we do a key press , we want another one
+ //everytime we do a key press , we want another one
 
 function restartGame(){
-  window.location.reload(); //won't reload for loseScreen
+  document.location.reload(); //won't reload for loseScreen
 }
 
+function continueGame(){
+hitScreen.classList.remove('show-level-up')
+
+   if (hitScreen.classList.remove('show-level-up')) {
+     playState = true;
+
+   }
+}
+
+window.requestAnimationFrame(draw);
 
 
-
-//window.addEventListener('keydown', moveShip);
 theCanvas.addEventListener('mousemove', movePlayer);
 theCanvas.addEventListener('click', createBullet);
 
@@ -315,4 +338,6 @@ playButton.addEventListener('click', resumeGame);
 pauseButton.addEventListener('click', pauseGame);
 resetButton.addEventListener('click', levelUpGame);
 restartButton.addEventListener('click', restartGame);
+lostButton.addEventListener('click', restartGame);
+hitButton.addEventListener('click', continueGame);
 })();
