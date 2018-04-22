@@ -34,7 +34,6 @@
     hitButton = document.querySelector('.shot'),
 
 
-//grab reset screen
     resetScreen = document.querySelector('.level-up');
 
 
@@ -169,9 +168,10 @@ function draw() {
         // playerLives.forEach((life, index) => {
         //   ctx.drawImage(playerImg, 10 + (index * 26), 10, 20, 20);
         // });
-        
+
         showHitScreen();
       }
+
 
      if (playerLives.length == 0) {
            showLoseScreen()
@@ -293,7 +293,7 @@ function showHitScreen(){
 function continueGame() {
   debugger;
   squares.forEach(square => square.y = 0);
-  
+
   hitScreen.classList.remove('show-level-up');
 
   setTimeout(() => {
@@ -304,12 +304,14 @@ function continueGame() {
 
 function levelUpGame() {
   //increase the difficulty
+
   bullets = [],
   ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
   squares = [
-  { x: randomX(), y: 30, x2: 200, y2: 200, image : mother, xspeed: -3, yspeed: 5, points: 10},
+  { x: randomX(), y: 30, x2: 200, y2: 200, image : mother, xspeed: 8, yspeed: 5, points: 10},
 ];
  bossLevel = true;
+
 
 //restart the game
 
@@ -320,8 +322,10 @@ resetScreen.classList.remove('show-level-up');
 
 playState = true;
 
+
   //restart animation
 window.requestAnimationFrame(draw);
+
 }
 
 function randomX() {
